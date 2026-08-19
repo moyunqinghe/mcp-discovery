@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-discovery"
+version = "1.0.0"
+description = "Pure protocol layer for discovering tools on MCP servers (stdio / Streamable HTTP / legacy HTTP+SSE)."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+    "httpx",
+    "pydantic",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.setuptools.packages.find]
+include = ["mcp_discovery*"]
